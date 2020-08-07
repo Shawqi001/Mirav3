@@ -10,7 +10,7 @@ pl_mira.js
 # pl_updatesDisable.js
 # pl_updatesEnable.js
 # pl_kernelDumper.js
-# pl_historyBlocker.js
+pl_historyBlocker.js
 # pl_app2usb.js
 # pl_dumper.js
 # pl_ftp.js
