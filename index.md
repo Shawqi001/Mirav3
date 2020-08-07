@@ -1,37 +1,144 @@
-## Welcome to GitHub Pages
+<html manifest="cache.manifest">
+<head>
+<title>6.72 Exploit</title>
+<script>
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+</script>
+<script src="exp_common.js"></script>
+<script src="exp_jailbreak.js"></script>
+</head>
+<body style="background-color:#3462a8;color:white;">
+<h1 id=msgs style='font-size:25px;text-align:center;'>6.72 Exploit Menu</h1>
+<hr><br>
+<h1 style='font-size:15px;text-align:center;'>تفعيل الالعاب</h1>
+<div style="text-align:center">
+<button onclick="load_exploit_mira(); return false"> Load Exploit + Mira Together </button>
+<br><br>
+<h5> all thanks to :@leeful @shawqi001 </h5>
+<br>
+</div>
+<script>
+function load_exploit(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit ...</h1>";
+setTimeout(jailbreak,500);
+}
 
-You can use the [editor on GitHub](https://github.com/Shawqi001/Mirav3/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+function load_exploit_mira(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit + Mira ...</h1>";
+LoadedMSG="Exploit + Mira Loaded ✔";ExploitMira="yes";MiraSRC="pl_mira.js";
+setTimeout(jailbreak,500);
+}
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+function load_exploit_miraUnoff(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit + Mira (Unofficial)...</h1>";
+LoadedMSG="Exploit + Mira Loaded ✔";ExploitMira="yes";MiraSRC="pl_mira_unofficial.js";
+setTimeout(jailbreak,500);
+}
 
-### Markdown
+function load_binloader(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Bin Loader ...</h1>";
+LoadedMSG="Send Payload To Port 9021";
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+function load_mira(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Mira ...</h1>";
+LoadedMSG="Mira Loaded ✔";
+var script = document.createElement('script');script.src = "pl_mira.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
 
-```markdown
-Syntax highlighted code block
+function load_mira_unofficial(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Mira ...</h1>";
+LoadedMSG="Mira Loaded ✔";
+var script = document.createElement('script');script.src = "pl_mira_unofficial.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
 
-# Header 1
-## Header 2
-### Header 3
+function load_ftp(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading FTP ...</h1>";
+LoadedMSG="FTP Loaded ✔";
+var script = document.createElement('script');script.src = "pl_ftp.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
 
-- Bulleted
-- List
+function load_dumper(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Dumper ...</h1>";
+LoadedMSG="Dumper Loaded ✔";
+var script = document.createElement('script');script.src = "pl_dumper.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
 
-1. Numbered
-2. List
+function load_linux(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Linux ...</h1>";
+LoadedMSG="Linux Loaded ✔";
+var script = document.createElement('script');script.src = "pl_linux.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
 
-**Bold** and _Italic_ and `Code` text
+function load_app2usb(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading AppToUSB ...</h1>";
+LoadedMSG="AppToUSB Loaded ✔";
+var script = document.createElement('script');script.src = "pl_app2usb.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
 
-[Link](url) and ![Image](src)
-```
+function load_kerneldump(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Kernel Dumper ...</h1>";
+LoadedMSG="Kernel Dumper Loaded ✔";
+var script = document.createElement('script');script.src = "pl_kernelDumper.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+function load_webrte(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading WebRTE ...</h1>";
+LoadedMSG="WebRTE Loaded ✔";
+var script = document.createElement('script');script.src = "pl_WebRTE.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
 
-### Jekyll Themes
+function load_todex(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading ToDEX ...</h1>";
+LoadedMSG="ToDEX Loaded ✔";
+var script = document.createElement('script');script.src = "pl_ToDEX.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Shawqi001/Mirav3/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+function load_historyblock(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading History Blocker ...</h1>";
+LoadedMSG="History Blocker Loaded ✔";
+var script = document.createElement('script');script.src = "pl_historyBlocker.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
 
-### Support or Contact
+function load_updatesdisable(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Disable Updates ...</h1>";
+LoadedMSG="Disable Updates Loaded ✔";
+var script = document.createElement('script');script.src = "pl_updatesDisable.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+function load_updatesenable(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Enable Updates ...</h1>";
+LoadedMSG="Enable Updates Loaded ✔";
+var script = document.createElement('script');script.src = "pl_updatesEnable.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_dbBackup(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading DB Backup ...</h1>";
+LoadedMSG="DB Backup Loaded ✔";
+var script = document.createElement('script');script.src = "pl_dbBackup.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_dbRestore(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading DB Restore ...</h1>";
+LoadedMSG="DB Restore Loaded ✔";
+var script = document.createElement('script');script.src = "pl_dbRestore.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+</script>
+</body>
+</html>
